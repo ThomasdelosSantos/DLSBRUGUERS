@@ -28,14 +28,23 @@ h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* Por defecto, el logo está visible */
 .logo {
     position: absolute;
     left: 20px;
-    top: 10px;
-    max-width: 100%; /* Hace que el logo se ajuste al contenedor */
-    height: auto; /* Mantiene la proporción original del logo */
-    width: 150px; /* Puedes ajustar el tamaño inicial si lo deseas */
+    top: px;
+    max-width: 100%;
+    height: auto;
+    width: 150px;
 }
+
+/* Cuando la pantalla sea de 768px o menor (típico de teléfonos móviles), ocultamos el logo */
+@media (max-width: 600px) {
+    .logo {
+        display: none; /* Esto oculta el logo */
+    }
+}
+
 
 
 .logo img {
@@ -221,12 +230,6 @@ button {
   
 button:hover {
     background-color: #45a049;
-}
-
-@media (max-width: 768px) {
-    .logo {
-        width: 120px; /* Tamaño más pequeño en pantallas pequeñas */
-    }
 }
   
   
