@@ -38,7 +38,7 @@ h1 {
     width: 150px;
 }
 
-/* Cuando la pantalla sea de 768px o menor (típico de teléfonos móviles), ocultamos el logo */
+/* Cuando la pantalla sea de 600px o menor (típico de teléfonos móviles), ocultamos el logo */
 @media (max-width: 600px) {
     .logo {
         display: none; /* Esto oculta el logo */
