@@ -1,0 +1,249 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eeeeee;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between; /* Esto ayuda a separar el logo y el carrito */
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1; /* Centra el título */
+    color: #004080;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Contenedor del logo a la izquierda */
+.logo {
+    position: absolute;
+    left: 20px; /* Mueve el logo a la izquierda */
+}
+
+.logo img {
+    width: 120px; /* Ajusta el tamaño del logo */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Efecto suave al pasar el mouse */
+}
+
+/* Carrito de compras */
+.carrito-icono {
+    cursor: pointer;
+    position: relative;
+    font-size: 24px;
+    margin-right: 30px; /* Reduje el margen derecho para moverlo a la izquierda */
+}
+
+
+.contador-carrito {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 14px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
+/* Contenedor de hamburguesas */
+.contenedor-hamburguesas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+    margin-top: 100px; /* Ajusta el margen para no tapar el contenido */
+}
+
+.hamburguesa {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+}
+
+.hamburguesa img {
+    width: 100%;
+    height: 150px; /* O el tamaño que prefieras */
+    object-fit: cover; /* Recorta y ajusta para que todas se vean iguales */
+    border-radius: 8px;
+}
+
+.nombre {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #2c3e50; /* Azul oscuro elegante */
+    font-family: 'Playfair Display', serif;
+    margin-top: 8px;
+}
+
+.precio {
+    color: #004080;
+    font-size: 16px;
+}
+
+.boton-agregar, .boton-pagar, .boton-eliminar {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-agregar:hover, .boton-pagar:hover, .boton-eliminar:hover {
+    background-color: #0066cc;
+}
+
+.carrito {
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    z-index: 1000;
+    display: none;
+}
+
+.carrito.mostrar {
+    display: block;
+}
+
+.carrito-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.carrito-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.total {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.metodos-pago img {
+    width: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.metodos-pago div {
+    margin: 8px 0;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Estilo del fondo del modal */
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro */
+}
+  
+/* El contenido del modal */
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+  
+/* El botón de cerrar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+/* Estilo para las opciones de pago */
+button {
+    padding: 10px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+  
+button:hover {
+    background-color: #45a049;
+}
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

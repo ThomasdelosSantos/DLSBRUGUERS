@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburguesas Delicias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo de DLS Burgers">
+        </div>
+        <h1>DLS BURGUERS</h1>
+        <div class="carrito-icono" onclick="mostrarOcultarCarrito()">
+            🛒
+            <span class="contador-carrito">0</span>
+        </div>
+    </header>    
+
+    <div class="contenedor-hamburguesas">
+        <script>
+            const nombresHamburguesas = [
+                'Clásica', 'Doble Queso', 'Bacon Deluxe', 'BBQ Especial', 'Pollo Crispy', 'Veggie',
+                'Picante', 'Gourmet', 'Cheddar Lover', 'Especial House', 'Mega Doble', 'Gran Bacon'
+            ];
+            const precios = [320, 380, 450, 470, 340, 310, 390, 500, 420, 480, 550, 530];
+
+            for (let i = 1; i <= 12; i++) {
+                document.write(`
+                    <div class="hamburguesa">
+                        <img src="img/${i}.png" alt="Hamburguesa ${nombresHamburguesas[i - 1]}">
+                        <div class="nombre">${nombresHamburguesas[i - 1]}</div>
+                        <div class="precio">$${precios[i - 1]} UYU</div>
+                        <button class="boton-agregar" onclick="agregarAlCarrito('${nombresHamburguesas[i - 1]}', ${precios[i - 1]})">Agregar al carrito</button>
+                    </div>
+                `);
+            }
+        </script>
+    </div>
+
+    <div class="carrito oculto" id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul class="carrito-items"></ul>
+        <div class="total">Total: $0 UYU</div>
+
+        <h3>Métodos de Pago</h3>
+        <div class="metodos-pago">
+            <div><img src="img/tarjeta.png" alt="Tarjeta"> Tarjeta de Crédito/Débito</div>
+            <div><img src="img/mercadopago.png" alt="Mercado Pago"> Mercado Pago</div>
+        </div>
+
+        <button class="boton-pagar" onclick="pagar()">Pagar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
