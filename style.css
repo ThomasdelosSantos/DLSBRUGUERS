@@ -28,11 +28,15 @@ h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* Contenedor del logo a la izquierda */
 .logo {
     position: absolute;
-    left: 20px; /* Mueve el logo a la izquierda */
+    left: 20px;
+    top: 10px;
+    max-width: 100%; /* Hace que el logo se ajuste al contenedor */
+    height: auto; /* Mantiene la proporción original del logo */
+    width: 150px; /* Puedes ajustar el tamaño inicial si lo deseas */
 }
+
 
 .logo img {
     width: 120px; /* Ajusta el tamaño del logo */
@@ -219,6 +223,11 @@ button:hover {
     background-color: #45a049;
 }
 
+@media (max-width: 768px) {
+    .logo {
+        width: 120px; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+}
   
   
   
